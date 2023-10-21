@@ -4,7 +4,7 @@ Implementación para conexión a API de terceros (pokemon) con Guzzle o Curl imp
 ### Pasos
 Se define el contrato o interfaz HttpClientInterface.
 Luego las clases concretas que la implementan: GuzzleClientPokemonService y CurlClientPokemonService.
-Se crea la clase abstacta HttpClientPokemonService que utiliza inyección de dependencia a través del contructor, que recibirá una instancia de GuzzleClientPokemonService y CurlClientPokemonService.
+Se crea la clase abstracta HttpClientPokemonService que utiliza inyección de dependencia a través del contructor, que recibirá una instancia de GuzzleClientPokemonService o CurlClientPokemonService según sea el caso.
 Por último se implementan todos los servicios posibles que ofrece la API de Pokemon. Estos servicios heredarán de HttpClientPokemonService
 
 
